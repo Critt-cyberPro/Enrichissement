@@ -5,7 +5,6 @@ public static void main(String[] args) {
 
     String sMot;
     int iA = 0;
-    boolean bA = false;
     Scanner lire = new Scanner(System.in);
 
     System.out.println("Écrivez une phrase et tout les a devinderon des $");
