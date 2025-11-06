@@ -5,7 +5,7 @@ public static void main(String[] args) {
     int iTemp;
     int iChoix=0;
 
-    Choix(iChoix, lire);
+    iChoix = Choix(lire);
     iTemp = tryParseInt("Quelle est la température !", lire);
     if (iChoix == 1) {
         System.out.println(iTemp+" Celcius est égale a "+conversion(iChoix, iTemp, lire)+" Fahrenheit");
@@ -16,19 +16,20 @@ public static void main(String[] args) {
     
     lire.close();
 }
-public static void Choix(int iChoix,Scanner lire) {
+public static int Choix(Scanner lire) {
     boolean bChoix = false; 
+    int iChoix;
     System.out.println("Quelle converstion voulez vous faire ?");
     do {
         iChoix = tryParseInt("1- C/F 2- F/C :", lire);
         if (iChoix == 1 || iChoix == 2) {
             bChoix = true;
-            conversion(iChoix, iChoix, lire);
         }
         else{
             System.out.println("Erreur !");
         }
     } while (!bChoix);
+    return iChoix;
 }
 public static int conversion(int iChoix,int iTemp,Scanner lire) {
     int iReponse=0;
