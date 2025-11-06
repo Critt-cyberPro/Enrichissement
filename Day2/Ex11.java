@@ -1,18 +1,25 @@
 import java.util.Scanner;
-
-public class Ex04 {
+public class Ex11 {
 public static void main(String[] args) {
-    int iValeur;
     Scanner lire = new Scanner(System.in);
+    int iChiffre;
 
-    do {
+    iChiffre = tryParseInt("Ecrire une chiffre a factorialiser : ", lire);
+    factorielle(iChiffre);
+    System.out.println("Le résultat est "+ factorielle(iChiffre));
 
-       iValeur = tryParseInt("Quel est votre valeur", lire);
 
-    } while (iValeur < 101);
+
     lire.close();
 }
- public static Integer tryParseInt(String message, Scanner lire) {
+public static int factorielle(int iChiffre) {
+        int iresultat = 1;
+        for (int i = 1; i <= iChiffre; i++) {
+            iresultat *= i;
+        }
+        return iresultat;
+    }
+    public static Integer tryParseInt(String message, Scanner lire) {
     String sValeur;
     int iValeur = 0;
     boolean bValide = false;
@@ -32,4 +39,3 @@ public static void main(String[] args) {
     return iValeur;
     }
 }
-

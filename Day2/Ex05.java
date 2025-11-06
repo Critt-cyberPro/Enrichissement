@@ -1,10 +1,5 @@
-
-
-import java.util.Scanner;
-
 public class Ex05 {
 public static void main(String[] args) {
-    Scanner lire = new Scanner(System.in);
     String sAlphabet= "abcdefghigklmnopqrstuvwxyz";
     String sReverse = "";
 
@@ -17,5 +12,6 @@ public static void main(String[] args) {
         }
         System.out.println(sReverse);
 }
+
 }
 

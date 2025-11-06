@@ -1,18 +1,28 @@
 import java.util.Scanner;
-
-public class Ex04 {
+public class Ex12 {
 public static void main(String[] args) {
-    int iValeur;
     Scanner lire = new Scanner(System.in);
+    int iMax,iMin;
 
-    do {
 
-       iValeur = tryParseInt("Quel est votre valeur", lire);
+    System.out.println("Entrer les deux nombres");
+    iMin = tryParseInt("Entre le nombre min : ", lire);
+    iMax = tryParseInt("Entrer le nombre Max : ", lire);
+    somme(iMin, iMax);
+    System.out.println("Le résultat est "+ somme(iMin, iMax));
 
-    } while (iValeur < 101);
+
+
     lire.close();
 }
- public static Integer tryParseInt(String message, Scanner lire) {
+public static int somme(int iMin,int iMax) {
+        int iresultat = 1;
+        for (int i = iMin; i <= iMax; i++) {
+            iresultat += i;
+        }
+        return iresultat;
+    }
+    public static Integer tryParseInt(String message, Scanner lire) {
     String sValeur;
     int iValeur = 0;
     boolean bValide = false;
@@ -32,4 +42,3 @@ public static void main(String[] args) {
     return iValeur;
     }
 }
-

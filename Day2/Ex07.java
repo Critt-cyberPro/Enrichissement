@@ -1,18 +1,35 @@
+import java.util.Scanner;
+
 public class Ex07 {
 public static void main(String[] args) {
-    
-    double dReponse1,dReponse2,dReponse3;//dReponse4,dReponse5,dReponse6,dReponse7,dReponse8,dReponse9,dReponse10;;
+    Scanner lire = new Scanner(System.in);
+    String sPhrase;
+    int iVoyelle=0,iCons=0;
 
-    double a =2,b=3,c=5,d=3;
+    System.out.print("Entrez une phrase : ");
+    sPhrase = lire.nextLine().toLowerCase();
 
-    dReponse1 =  (a * (b + d) - 2) * 3 ;
-    dReponse2 =   Math.sqrt(c - a) * d - 1 ;
-    dReponse3 =    b * (-d + 2) - a * (c + d) ;
+    for (int i = 0; i < sPhrase.length(); i++) {
+        char c = sPhrase.charAt(i);
+        if (Character.isLetter(c)) {
+            if (sPhrase.charAt(i) == 'a' ||sPhrase.charAt(i) == 'e' ||sPhrase.charAt(i) == 'i' ||sPhrase.charAt(i) == 'o' ||sPhrase.charAt(i) == 'u' ||sPhrase.charAt(i) == 'y') {
+                iVoyelle++;
+            }
+            if (sPhrase.charAt(i) != 'a' && sPhrase.charAt(i) != 'e' && sPhrase.charAt(i) != 'i' &&sPhrase.charAt(i) != 'o' &&sPhrase.charAt(i) != 'u' &&sPhrase.charAt(i) != 'y') {
+                iCons++;
+            }
+            else{
+                System.out.println("Error !");
+            }
+        }
+    }
+
+    System.out.println("Nombre de consonne : "+iCons);
+    System.out.println("Nombre de Voyelle : "+iVoyelle);
 
 
-    System.out.println(" "+dReponse1);
-    System.out.println(" "+dReponse2);
-    System.out.println(" "+dReponse3);
 
+    lire.close();
 }
 }
+
