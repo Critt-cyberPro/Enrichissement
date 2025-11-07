@@ -6,7 +6,7 @@ public static void main(String[] args) {
     int iNombre;
 
     System.out.println("Entrer un Maximum de 10 nombre !");
-    for ( int i=0; i<10 ; i++) {
+    for ( int i=0; i < iTableu.length ; i++) {
        
             iNombre = tryParseInt("Entrez un nombre :", lire);
             iTableu[i] = iNombre;
