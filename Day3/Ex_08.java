@@ -1,8 +1,7 @@
-import java.util.Random;
+
 
 public class Ex_08 {
 public static void main(String[] args) {
-    Random lire = new Random();
 
     Object [][] iNote = {
 
@@ -11,9 +10,16 @@ public static void main(String[] args) {
         {"TP2",45,55,67,89,100,95,92,81},
         {"Examen1",34,65,21,67,75,54,69,54}
     };
-    moyEval(iNote);
+    System.out.println("La moyenne du première exercise est : "+moyEval(iNote, 2));
+    System.out.println("La moyenne du deuxième exercise est : "+moyEval(iNote, 3));
+    System.out.println("La moyenne de l'examen est : "+moyEval(iNote, 4));
 }
-public static void moyEval(Object [][] iNote) {
-    iNote[2][2]
+public static int moyEval(Object [][] iNote,int iVal) {
+    int iMoy,iSomm=0;
+    for (int i=1; i<iNote.length; i++) {
+        iSomm += (int)iNote[i][iVal];
+    }
+    iMoy =iSomm/8;
+    return iMoy;
 }
 }
