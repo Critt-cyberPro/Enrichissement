@@ -1,4 +1,5 @@
 import java.util.Random;
+
 public class Ex_04 {
 public static void main(String[] args) {
     int [] iTableau = new int[5];
@@ -9,6 +10,7 @@ public static void main(String[] args) {
     int iPP=0,iPG=0;
 
     for ( int i=0; i< iTableau.length ; i++) {
+       
         iNombre = rNombre.nextInt(101);
         if (iNombre < iPetit){
             iPetit = iNombre;
@@ -23,8 +25,5 @@ public static void main(String[] args) {
     }
     System.out.println("La valeur la plus grande : "+iGrand +" en "+iPG+" position !");
     System.out.println("La valeur la plus petite : "+iPetit+" en "+iPP+" position !");
-
-
-
 }
 }
